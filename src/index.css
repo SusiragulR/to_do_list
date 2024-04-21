@@ -1,0 +1,250 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+.App {
+    background-color: #282c34;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    margin: auto;
+    height: 100vh;
+    border: 1px solid gray;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    background-color: #282c34;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.body{
+    min-height: 96vh;
+    flex-grow: 1;
+}
+
+.dark{
+    background-color: #282c34
+}
+
+.light{
+    background-color: rgb(254, 251, 251);
+    color: #282c34;
+}
+
+nav{
+    width:100%;
+    display: flex;
+    height: 40px;
+    color: white;
+    background-color: #0493bb;
+    align-items: center;
+}
+
+nav div{
+    margin-left: 25px;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: solid 2px #0493bb;
+    color: aliceblue;
+}
+
+nav div:hover{
+    border: solid 2px white;
+}
+
+#view{
+    position: relative;
+}
+
+.dropdown-content{
+    margin-left: 0;
+    margin-top: 5px;
+    position: absolute;
+    display: none;
+    width: max-content;
+    background-color: #0493bb;
+    color: aliceblue;
+    border: 2px solid white;
+    z-index: 1;
+}
+
+#view:hover .dropdown-content{display: block;}
+
+.dropdown-option{
+    padding: 10px;
+    margin: 0;
+    color: white;
+}
+
+.dropdown-option:hover{
+    background: #03718f;
+}
+
+#options{
+    position: relative;
+}
+
+#options:hover .dropdown-content{display: block;}
+
+.links{
+    text-decoration: none;
+}
+
+.addForm,.searchForm{
+    width: 62%;
+    display: flex;
+    justify-self: center;
+    margin-top: 15px;
+    margin-left: calc(19%);
+}
+  
+.addForm input[type='text'] {
+    flex-grow: 1;
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    padding-left: 15px !important;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border: 2px solid rgb(104, 103, 103);
+    border-right: none;
+}
+
+.addButton{
+    max-height: 48px;
+    min-width: 48px;
+    padding:15px 15px;
+    color: white;
+    background-color: #0493bb;
+    font-size: 1rem;
+    font-weight: bold;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border: 2px solid rgb(104, 103, 103);
+    border-left: none;
+}
+
+.addButton:hover,.addButton:focus{
+    background-color: rgb(65, 211, 65);
+}
+
+.searchForm input[type='text'] {
+    flex-grow: 1;
+    min-width: calc(62%);
+    min-height: 48px;
+    font-size: 1rem;
+    padding: 0.5rem;
+    padding-left: 15px !important;
+    border-radius: 2rem;
+    border: 2px solid rgb(104, 103, 103);
+}
+
+.addForm input[type='text']:focus,.searchForm input[type='text']:focus{
+    outline: none;
+}
+
+ul {
+    width: 100%;
+    list-style: none;
+    padding: 0 0.5rem 0.5rem;
+    margin-bottom: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0.25rem 0;
+    max-width: 70%;
+    margin-left: calc(15%);  
+    margin-right: calc(15%);
+    background-color: #dddbdb; 
+    border-radius: 2rem;
+    align-self: center;
+}
+  
+.item input[type="checkbox"] {
+    text-align: center;
+    width: 2.5rem;
+    width: 48px;
+    min-width: 48px;
+    height: 2.5rem;
+    height: 48px;
+    min-height: 48px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+  
+.item > label {
+    font-size: 1.5rem;
+    flex-grow: 1;
+    padding-left: 5px;
+}
+  
+.deleteButton {
+    width: 48px;
+    min-width: 48px;
+    height: 36px;
+    font-size: 1rem;
+    color: steelblue;
+    cursor: pointer;
+}
+  
+.deleteButton:focus, 
+.deleteButton:hover {
+    color: red;
+    outline: none;
+}
+
+.Missing{
+    color: aliceblue;
+}
+
+.footer {
+    width: 100%;
+    padding: 0.25em;
+    background-color: #0493bb;
+    color: aliceblue;
+    place-content: center;
+}
+
+@media only screen and (min-width: 992px) {
+
+    .App-header{
+        font-size: 80px;
+    }
+
+    .addForm,.searchForm{
+        max-width: 40%;
+        margin-left: calc(30%);
+    }
+
+    .item{
+        max-width: 46%;
+        margin-left: calc(27%);
+        margin-bottom: 10px;
+    }
+}
