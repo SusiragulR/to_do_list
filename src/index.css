@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+
 }
 
 body {
@@ -110,16 +111,9 @@ nav div:hover{
 .links{
     text-decoration: none;
 }
-
-.addForm,.searchForm{
-    width: 62%;
-    display: flex;
-    justify-self: center;
-    margin-top: 15px;
-    margin-left: calc(19%);
-}
   
 .addForm input[type='text'] {
+    width: calc(62% - 48px);
     flex-grow: 1;
     min-height: 48px;
     font-size: 1rem;
@@ -151,7 +145,7 @@ nav div:hover{
 
 .searchForm input[type='text'] {
     flex-grow: 1;
-    min-width: calc(62%);
+    width: calc(62%);
     min-height: 48px;
     font-size: 1rem;
     padding: 0.5rem;
@@ -162,6 +156,16 @@ nav div:hover{
 
 .addForm input[type='text']:focus,.searchForm input[type='text']:focus{
     outline: none;
+}
+
+.addForm,.searchForm{
+    max-width: 62% !important;
+    display: flex;
+    align-self: center;
+    margin-top: 15px;
+    margin-left: calc(19%) !important;
+    margin-right: calc(19%);
+    box-sizing: border-box !important;
 }
 
 ul {
@@ -231,6 +235,38 @@ ul {
     place-content: center;
 }
 
+
+@media only screen and (max-width: 450px) {
+
+    *{
+        box-sizing: border-box !important;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .App-header{
+        font-size: 80px;
+    }
+
+    .addForm,.searchForm{
+        min-width: 80% !important;
+        margin-left: calc(10%) !important;
+        margin-right: calc(10%);
+    }
+
+    .searchForm{
+        margin-bottom: 20px;
+    }
+
+    .item{
+        min-width: 96%;
+        margin-left: calc(2%) !important;
+        margin-right: calc(2%);
+        margin-bottom: 10px;
+    }
+}
+
 @media only screen and (min-width: 992px) {
 
     .App-header{
@@ -248,3 +284,4 @@ ul {
         margin-bottom: 10px;
     }
 }
+
